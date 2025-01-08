@@ -1,4 +1,3 @@
-
 # # a calculator program
 # performing basic calculations and intermediate like log,exponential and square root
 

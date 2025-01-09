@@ -1,12 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # # Python introduction
 
 # ## Python Syntax
-
-# In[ ]:
-
 
 # print statement
 print("Hello world!")

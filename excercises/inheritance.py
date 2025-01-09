@@ -1,10 +1,5 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # # inheritance
-
-# In[1]:
-
 
 # Create a class that houses resturant functions
 class Resturant :
@@ -28,16 +23,8 @@ class Resturant :
         self.number_served += customer_served
         print(f"Number of customers served in a day : {self.number_served}")
 
-
-# In[2]:
-
-
 # create an instance
 resturant_one = Resturant('Kempinski Villa Rosa','spanish omlette')
-
-
-# In[3]:
-
 
 class Supplier(Resturant) :
     """
@@ -59,40 +46,16 @@ class Supplier(Resturant) :
     def describe_restaurant(self):
         print(f"The most popular Resturants in the area is : {self.restaurant_name}")
 
-
-# In[4]:
-
-
 # create
 supplier_one = Supplier('Kempinski Villa Rosa','spanish omlette','Pilakan Enterprise','ChickenEggs','0720065343')
 
-
-# In[5]:
-
-
 supplier_one.supplies_descriptions()
-
-
-# In[6]:
-
 
 supplier_one.set_number_served(2)
 
-
-# In[7]:
-
-
 supplier_one.increment_number_served(4)
 
-
-# In[8]:
-
-
 supplier_one.describe_restaurant()
-
-
-# In[9]:
-
 
 resturant_one.describe_restaurant()
 
@@ -103,8 +66,6 @@ resturant_one.describe_restaurant()
 # will work; just pick the one you like better. Add an attribute called flavors that
 # stores a list of ice cream flavors. Write a method that displays these flavors.
 # Create an instance of IceCreamStand, and call this method.</p>
-
-# In[28]:
 
 
 class IceCreamStand(Resturant):
@@ -120,20 +81,9 @@ class IceCreamStand(Resturant):
         for flavor in self.flavors:
             print(f" :{flavor}")
 
-
-# In[29]:
-
-
 scoop_one = IceCreamStand('Juniors ','Icecream',['Vanilla','stawberry','chocolate'])
 
-
-# In[30]:
-
-
 scoop_one.different_flavors()
-
-
-# In[ ]:
 
 
 

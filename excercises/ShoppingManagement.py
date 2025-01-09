@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # # program for users to manage their shopping list
 
@@ -20,8 +18,6 @@
 # If the user selects 'remove', use the input() function to prompt the user to enter an item to remove from the list.
 # If the user selects 'view', use a for loop to iterate through the list of items and display them to the user.
 # Use the list, tuple, set, and dictionary data structures to store and manipulate the shopping items.</p>
-
-# In[1]:
 
 
 # initialize a list
@@ -62,7 +58,7 @@ while True:
         print("Invalid choice. Please enter a number between 1 and 5.")
 
 
-# In[ ]:
+
 
 
 

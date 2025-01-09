@@ -3,7 +3,7 @@ This is are python basic practice programs aimed  towards data Science and a lit
 * Start at basics001-checkpoint
 * clone the repo to your desktop 
 * try re-doing the excercises ,if you encounter a challenge use the solutions provided
-#Note some python excercises in excercises folder were converted from .ipynb format to .py using nbconvert
+# Note some python excercises in excercises folder were converted from .ipynb format to .py using nbconvert
 * Here's the process
 **first**
   <p>Install : pip install nbconvert (this is a cmd command)

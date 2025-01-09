@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # # pizza ordering system
 # 
@@ -20,9 +18,6 @@
 # <p>If they want cheese :</p>
 # 
 #  ``` Extra cheese for any size pizza: + $1 ```
-
-# In[ ]:
-
 
 # welcoming message to the user
 print("Welcome to Python Pizza Deliveries")

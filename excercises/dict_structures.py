@@ -1,49 +1,25 @@
-#!/usr/bin/env python
-# coding: utf-8
 
 # ## Dictionary{}
 
 # * {key:vaue} pair
 
-# In[ ]:
-
 
 # sample dictionary
-my_dict = {'name': 'Darius','Course' : 'Data science'}
-
-
-# In[ ]:
-
+my_dict = {'name': 'Darius', 'Course': 'Data science'}
 
 # check the type of object
 type(my_dict)
 
-
 # # properties
-# 
+
 # * indexing
-# 
-
-# In[ ]:
-
-
 # Accessing item in a dictionary using the key
 my_dict['name']
-
-
-# In[ ]:
-
 
 # Indexing using the .get method
 my_dict.get('Course')
 
-
 # # mutable
-# 
-
-# In[ ]:
-
-
 # modify the dict
 my_dict['school'] = 'Gomycode'
 
@@ -53,9 +29,6 @@ my_dict
 
 # * **key unqueness**
 
-# In[ ]:
-
-
 # Before adding a duplicated key
 my_dict['location'] = 'Nairobi'
 print(my_dict)
@@ -63,10 +36,6 @@ print(my_dict)
 my_dict['location'] = 'Westlands'
 print("After adding a diff value to the same key")
 (my_dict)
-
-
-# In[ ]:
-
 
 # Accessing keys
 my_dict.keys()
@@ -84,15 +53,12 @@ my_dict.items()
 # * Determine the highest grade in each subject.
 # * List all students who have a grade above a specified threshold in a given subject.
 
-# In[7]:
-
-
 # sample student grades
 students = {
-    "Alice": {"Math": 85, "Science": 92, "English": 88, "Socialstudies" : 66},
-    "Hilda": {"Math": 90, "Science": 85, "English": 95, "Socialstudies" : 65},
-    "Masibo": {"Math": 78, "Science": 80, "English": 82, "Socialstudies" : 72},
-    "Darius": {"Math": 88, "Science": 90, "English": 84, "Socialstudies" : 80}
+    "Alice": {"Math": 85, "Science": 92, "English": 88, "Social studies": 66},
+    "Hilda": {"Math": 90, "Science": 85, "English": 95, "Social studies": 65},
+    "Masibo": {"Math": 78, "Science": 80, "English": 82, "Social studies" : 72},
+    "Darius": {"Math": 88, "Science": 90, "English": 84, "Social studies": 80}
 }
 # find the average grade for each student
 averages = {student: sum(grades.values()) / len(grades) for student, grades in students.items()}
@@ -117,14 +83,12 @@ print(f"Students above threshold are:{students_above_threshold}")
 # * Change the employee's position to "Manager"
 # * Add a new key "email" with the value "john@example.com" to the employee dictionary
 
-# In[3]:
-
 
 employee = {
     "name": "John",
-    "age" : 25,
-    "position" : "Developer",
-    "salary" : 3000
+    "age": 25,
+    "position": "Developer",
+    "Salary": 3000
 }
 # Display the name value from the dictionary
 print(employee.get("name"))
@@ -133,9 +97,6 @@ employee["position"] = "Manager"
 # Add new key to email
 employee["email"] = "john@example.com"
 print(employee)
-
-
-# In[ ]:
 
 
 

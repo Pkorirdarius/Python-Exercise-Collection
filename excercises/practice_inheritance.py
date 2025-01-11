@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
+
 
 # <p>Admin: An administrator is a special kind of user. Write a class called
 # Admin that inherits from the User class you wrote in. Add an attribute, privileges, that stores a list of
@@ -7,10 +6,8 @@
 # Write a method called show_privileges() that lists the administrator’s set of
 # privileges. Create an instance of Admin, and call your method.</p>
 
-# In[1]:
 
-
-# create aclass known as user
+# create a class known as user
 class User :
     def __init__(self,first_name,last_name,age,contact_info,gender):
         self.first_name = first_name
@@ -45,9 +42,6 @@ class User :
         print(f"Please log into your account , you have logged in :{self.login_attempts} times")
 
 
-# In[6]:
-
-
 class Admin(User):
     """
     Add an attribute, privileges, that stores a list of strings like "can add post", "can delete post", "can ban user", and so on. 
@@ -60,27 +54,16 @@ class Admin(User):
     
 
 
-# In[7]:
-
-
 user_one = Admin('Darius','Pilakan',21,'0745303445',"male",["can add post","can delete post", "can ban user"])
 
 
-# In[8]:
-
-
 user_one.show_privileges()
-
-
-# In[5]:
 
 
 user_one.describe_user()
 
 
 # <p>Privileges: Write a separate Privileges class. The class should have one attribute, privileges, that stores a list of strings as described in Admin. Move the show_privileges() method to this class. Make a Privileges instance as an attribute in the Admin class. Create a new instance of Admin and use your method to show its privileges</p>
-
-# In[12]:
 
 
 class Previleges(Admin):
@@ -96,19 +79,10 @@ class Previleges(Admin):
             print(f" :{privilege}")
 
 
-# In[13]:
-
-
 admin_one = Previleges('Darius','Pilakan',21,'0745303445',"male",["can add post","can delete post", "can ban user"])
 
 
-# In[14]:
-
-
 admin_one.show_privileges()
-
-
-# In[ ]:
 
 
 

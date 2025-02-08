@@ -62,6 +62,23 @@ def logarithm(x, base=10):
     if x <= 0:
         raise ValueError("Logarithm is undefined for non-positive numbers.")
     return math.log(x, base)
+def f(x):
+    return x**2 - 2*x - 1
+
+def secant_method(x0, x1, tol=1e-6, max_iter=5):
+    for _ in range(max_iter):
+        f_x0, f_x1 = f(x0), f(x1)
+        if abs(f_x1) < tol:
+            return x1  # Root found
+        
+        # Secant formula
+        x2 = x1 - f_x1 * (x1 - x0) / (f_x1 - f_x0)
+        
+        # Update values
+        x0, x1 = x1, x2
+    
+    return x1  # Return best estimate
+
    # Main program 
 if __name__ == "__main__":
     calc = Calculator()
@@ -69,6 +86,7 @@ if __name__ == "__main__":
     calc.add_operation('^', exponentiate)
     calc.add_operation('sqrt', square_root)
     calc.add_operation('log', logarithm)
+    calc.add_operation('secant', secant_method)
 
     print("Welcome to Calculator 2.0")
     print("Available operations:")

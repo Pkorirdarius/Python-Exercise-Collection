@@ -98,4 +98,4 @@ if __name__ == "__main__":
     handling HTTP requests, and parsing HTML content."""
 """This code is a Python script that scrapes content from a Wikipedia page using the requests library to fetch the HTML content and BeautifulSoup to parse it.
 The script extracts article titles, text organized by headings, and links to other Wikipedia pages.
-
+"""

@@ -1,4 +1,5 @@
 import nltk
+nltk.download('wordnet')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 from nltk.tokenize import word_tokenize, sent_tokenize
@@ -8,7 +9,7 @@ import string
 import streamlit as st
 
 # Load the text file and preprocess the data
-with open('enter a file_name', 'r', encoding='utf-8') as f:
+with open('chat_bot\\bank.csv', 'r', encoding='utf-8') as f:
     data = f.read().replace('\n', ' ')
 # Tokenize the text into sentences
 sentences = sent_tokenize(data)

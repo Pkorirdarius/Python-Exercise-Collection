@@ -5,6 +5,18 @@ import streamlit as st
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 def detect_faces(frame, scaleFactor, minNeighbors, color):
+    """
+    Detect faces in a frame using the Viola-Jones algorithm.
+
+    Args:
+        frame (numpy.ndarray): The input frame.
+        scaleFactor (float): The scale factor for the face detection.
+        minNeighbors (int): The minimum number of neighbors for the face detection.
+        color (tuple): The color for the rectangles around detected faces.
+
+    Returns:
+        tuple: The frame with detected faces and the list of detected faces.
+    """
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, scaleFactor=scaleFactor, minNeighbors=minNeighbors)
     for (x, y, w, h) in faces:
@@ -13,8 +25,24 @@ def detect_faces(frame, scaleFactor, minNeighbors, color):
 
 
 def save_image(image, faces):
+    """
+    Save the image with detected faces.
+
+    Args:
+        image (numpy.ndarray): The image with detected faces.
+        faces (list): The list of detected faces.
+
+    Returns:
+        bool: True if the image is saved successfully, False otherwise.
+    """
     if len(faces) > 0:
-        cv2.imwrite("detected_faces.png", image)
+        try:
+            cv2.imwrite("detected_faces.png", image)
+            return True
+        except Exception as e:
+            print(f"Error saving image: {e}")
+            return False
+    return False
 
 
 def app():
@@ -58,8 +86,11 @@ def app():
         cv2.destroyAllWindows()
 
         # Save the image
-        save_image(frame, faces)
-        st.success("Image saved as 'detected_faces.png'")
+        image_saved = save_image(frame, faces)
+        if image_saved:
+            st.success("Image saved as 'detected_faces.png'")
+        else:
+            st.error("Failed to save image")
 
 
 if __name__ == "__main__":

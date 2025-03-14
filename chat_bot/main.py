@@ -2,6 +2,7 @@ import nltk
 nltk.download('wordnet')
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
+nltk.download('stopwords')
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
@@ -9,10 +10,12 @@ import string
 import streamlit as st
 
 # Load the text file and preprocess the data
-with open('./bank.csv', 'r', encoding='utf-8') as f:
+with open('./ArtOfWar.txt', 'r', encoding='utf-8') as f:
     data = f.read().replace('\n', ' ')
 # Tokenize the text into sentences
 sentences = sent_tokenize(data)
+# Load stopwords once
+stop_words = set(stopwords.words('english'))
 # Define a function to preprocess each sentence
 def preprocess(sentence):
     # Tokenize the sentence into words
@@ -49,7 +52,7 @@ def chatbot(question):
 # Create a Streamlit app
 def main():
     st.title("Chatbot")
-    st.write("Hello! I'm a chatbot. Ask me anything about the topic in the text file.")
+    st.write("Hello! I'm a chatbot. Ask me anything about the topic in the ArtOfWar file.")
     # Get the user's question
     question = st.text_input("You:")
     # Create a button to submit the question
@@ -58,4 +61,4 @@ def main():
         response = chatbot(question)
         st.write("Chatbot: " + response)
 if __name__ == "__main__":
-    main()
+    main() 

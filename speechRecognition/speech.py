@@ -1,7 +1,6 @@
 # fuction transcribes users words into text
 import streamlit as st
 import speech_recognition as sr
-import threading
 import time
 
 # Define a dictionary to map API names to their corresponding functions

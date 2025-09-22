@@ -64,6 +64,7 @@ This repo is a collection of small to medium Python projects and notebooks to he
    ```bash
    jupyter nbconvert --to script your_notebook.ipynb
 6. Modify, break, fix, and experiment — that’s how you’ll learn.
+   
 ⚙️ Setup / Requirements
 
 You’ll need:

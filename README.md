@@ -56,3 +56,22 @@ This repo is a collection of small to medium Python projects and notebooks to he
    
    git clone https://github.com/Pkorirdarius/Python-Exercise-Collection.git
    cd Python-Exercise-Collection
+2. Open a notebook or script from the section you want to try.
+3. For .ipynb notebooks, launch:
+   ```bash
+   jupyter notebook
+4. If you want to convert a notebook to a Python script:
+   ```bash
+   jupyter nbconvert --to script your_notebook.ipynb
+6. Modify, break, fix, and experiment — that’s how you’ll learn.
+⚙️ Setup / Requirements
+
+You’ll need:
+
+Python 3.7+
+
+Jupyter Notebook
+
+Common Python libraries:
+```bash
+pip install numpy pandas matplotlib scikit-learn requests beautifulsoup4

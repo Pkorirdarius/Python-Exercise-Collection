@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)  
 [![Notebooks](https://img.shields.io/badge/Jupyter-Notebooks-orange.svg)](https://jupyter.org/)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
 A curated set of Python practice programs and projects — from fundamentals to web scraping and machine learning.  
 This repository is meant for **learning by doing**, experimenting, and building confidence in Python.
